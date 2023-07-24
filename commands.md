@@ -15,15 +15,17 @@
 ## npx nx g @nx/angular:application --name=mobile --directory=front --routing=true --style=scss --no-interactive 
 - Se quiser apenas simular adicione "-d" ao final do comando
 
+## npx nx g @nx/nest:application --name=auth -frontendProject=front-mobile --directory=back --strict-true 
+
 ## npm audit fix
 - Verifica se o Angular resolveu os problemas de vulnerabilidade 
 
 # Commits
 ```
-feat  - Funcionalidade nova
-fix   - Correção de bugs
-chore - 
-style -
+feat/  - Uma nova funcionalidade ou uma modificação grande que foi adicionada ao projeto
+fix/   - Correção de bugs
+chore/ - Correções de código pequenas que não são consideradas importantes o suficiente para receber um commit próprio
+style/ - É usado para mudar a formatação do código ou adição de newlines e espaços.
 ```
 # Versions
 - 1.3.1
