@@ -46,13 +46,13 @@
  npx git-cz
 ```
 
-**feat/**  - Uma nova funcionalidade ou uma modificação grande que foi adicionada ao projeto
+- **feat/** : Uma nova funcionalidade ou uma modificação grande que foi adicionada ao projeto
 
-**fix/**  - Correção de bugs
+- **fix/** : Correção de bugs
 
-**chore/** - Correções de código pequenas que não são consideradas importantes o suficiente para receber um commit próprio
+- **chore/** : Correções de código pequenas que não são consideradas importantes o suficiente para receber um commit próprio
 
-**style/** - É usado para mudar a formatação do código ou adição de newlines e espaços.
+- **style/** : É usado para mudar a formatação do código ou adição de newlines e espaços.
 
 # Versions
 - 1.3.1
