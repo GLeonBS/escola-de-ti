@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 
 @Component({
   selector: 'escola-de-ti-root',
-  templateUrl: './app.component.html',
+  template: `
+  <pre>
+    {{hello$ | async | json}}
+  </pre>
+  `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'front-mobile';
+
+  hello$ = inject(HttpClient).get('/api')
 }

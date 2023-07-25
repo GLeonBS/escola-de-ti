@@ -17,10 +17,20 @@
 
 ## npx nx g @nx/nest:application --name=auth -frontendProject=front-mobile --directory=back --strict-true 
 
+## npx nx graph
+
+## npx nx g @nx/nest:resource --name=auth --project=back-auth --type=rest --directory=app --crud=false
+
+## npm i --save @nestjs/jwt
+
+## npx nx run-many -t server
+- Executa as aplicações front e back
+
 ## npm audit fix
 - Verifica se o Angular resolveu os problemas de vulnerabilidade 
 
 # Commits
+## npx git-cz
 ```
 feat/  - Uma nova funcionalidade ou uma modificação grande que foi adicionada ao projeto
 fix/   - Correção de bugs
