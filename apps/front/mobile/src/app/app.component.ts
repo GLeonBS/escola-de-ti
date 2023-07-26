@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 export class AuthForm extends FormGroup {
   constructor(){
@@ -14,16 +14,16 @@ export class AuthForm extends FormGroup {
 @Component({
   selector: 'escola-de-ti-root',
   template: `
-  <form [formGroup]="form" [] = >
-    <label>
-      <input type="text" formControlName="username">
-    </label>
+  <form [formGroup]="form" (submit)="onSubmit()">
+      <label>
+        <input type="text" formControlName="username" >
+      </label>
+      <label>
+        <input type="password" formControlName="password" >
+      </label>
 
-    <label>
-      <input type="text" formControlName="password">
-    </label>
-
-  </form>
+      <button>Login</button>
+    </form>
   `,
   styleUrls: ['./app.component.scss'],
 })
@@ -33,9 +33,9 @@ export class AppComponent {
   httpClient = inject(HttpClient)
   form = new AuthForm()
 
-  onSubmit()[
+  onSubmit(){
     this.httpClient
     .post('/api/auth/login', this.form.value)
     .subscribe(console.log)
-  ]
+  }
 }
