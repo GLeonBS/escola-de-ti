@@ -33,7 +33,7 @@
  npm i --save @nestjs/jwt
 ```
 ```
- npx nx run-many -t server
+ npx nx run-many -t serve
 ```
 - Executa as aplicações front e back
 ```
