@@ -20,7 +20,8 @@ export class UsersService {
   }
 
   async findOne(name: string) {
-    return this.userModel.findOne({ name: name })
+    const findedUser = this.userModel.findOne({ name: name })
+    return findedUser
   }
 
 
@@ -29,9 +30,9 @@ export class UsersService {
       id,
       {
         name: updateUserDto.name,
-        cpf: updateUserDto.cpf,
-        age: updateUserDto.age,
         email: updateUserDto.email,
+        password: updateUserDto.password,
+        age: updateUserDto.age,
       },
       { new: true },
     )
@@ -40,6 +41,7 @@ export class UsersService {
   }
 
   async remove(id: string) {
-    return this.userModel.findByIdAndDelete(id)
+    this.userModel.findByIdAndDelete(id)
+    return "Sucessful deleted user"
   }
 }
