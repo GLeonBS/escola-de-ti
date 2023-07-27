@@ -30,9 +30,9 @@ export class ProductService {
       id,
       {
         name: updateProductDto.name,
-        email: updateProductDto.description,
-        password: updateProductDto.price,
-        age: updateProductDto.quantity,
+        description: updateProductDto.description,
+        price: updateProductDto.price,
+        quantity: updateProductDto.quantity,
       },
       { new: true },
     )
@@ -41,8 +41,8 @@ export class ProductService {
   }
 
   async remove(id: string) {
-    this.productModel.findByIdAndDelete(id)
-    return "Sucessful deleted product"
+    const deletedProduct = this.productModel.findByIdAndDelete(id)
+    return deletedProduct
   }
 
 }
