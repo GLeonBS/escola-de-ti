@@ -1,0 +1,17 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+    <label>
+      <input type="text" formControlName="name" placeholder="Insira seu nome" >
+    </label>
+    <label>
+        <input type="text" formControlName="email" placeholder="Insira seu email">
+      </label>
+      <label>
+        <input type="number" formControlName="age" placeholder="Insira sua idade">
+      </label>
+    <label>
+      <input type="password" formControlName="password" placeholder="Insira sua senha">
+    </label>
+
+    <button>Login</button>
+</form>
+
