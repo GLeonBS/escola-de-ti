@@ -8,6 +8,7 @@ import { UsersModule } from './users/users.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ValidationPipe } from '@nestjs/common/pipes';
 import { ProductModule } from './product/product.module';
+import { StoreModule } from './store/store.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { ProductModule } from './product/product.module';
     UsersModule,
     MongooseModule.forRoot('mongodb://0.0.0.0/nest'),
     ProductModule,
+    StoreModule,
   ],
   controllers: [AppController],
   providers: [
