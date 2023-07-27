@@ -1,6 +1,6 @@
 # Formas de lidar com formulários em Angular 2
 
-Em Angular 2, existem duas formas principais de lidar com formulários:
+Em Angular, existem duas formas principais de lidar com formulários:
 
 ## 1. Reactive (Reativos)
 
