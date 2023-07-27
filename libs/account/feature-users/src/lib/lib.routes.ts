@@ -1,5 +1,9 @@
 import { Route } from '@angular/router';
+import { AccountFeatureUsersComponent } from './account-feature-users.component';
 
 export const accountFeatureUsersRoutes: Route[] = [
-  /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
+  {
+    path: '' ,
+    component: AccountFeatureUsersComponent
+  }
 ];
