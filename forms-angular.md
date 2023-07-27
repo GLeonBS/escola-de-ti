@@ -1,4 +1,4 @@
-# Formas de lidar com formulários em Angular 2
+# Formas de lidar com formulários em Angular 
 
 Em Angular, existem duas formas principais de lidar com formulários:
 
