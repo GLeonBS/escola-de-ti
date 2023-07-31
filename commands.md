@@ -32,6 +32,32 @@
 ```
  npm i --save @nestjs/jwt
 ```
+
+```
+npm i @angular/material
+```
+- Instala a biblioteca material do Angular no projeto
+
+```
+npx nx generate @angular/material:ng-add --project front-mobile
+```
+- Adiciona a biblioteca no projeto
+
+```
+npx nx g @nx/angular:library --name=feature-products --directory=store --lazy=true --parent=apps/front/mobile/src/app/app.routes.ts --routing=true --changeDetection=OnPush --displayBlock=true --prefix=store --style=scss
+```
+- Lib store
+
+```
+https://fonts.google.com/icons
+```
+- Icones utilizaveis
+
+```
+nx g c store-featue-products --project=store-feature-products --flat -d
+```
+- Gera um componente para Store
+
 ```
  npx nx run-many -t serve
 ```
