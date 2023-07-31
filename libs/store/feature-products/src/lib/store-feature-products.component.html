@@ -1,16 +1,38 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="spacer"></span>
-    <button mat-icon-button class="icon favorite-icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="icon">
-        <mat-icon>share</mat-icon>
-    </button>
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="icon favorite-icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="icon">
+    <mat-icon>share</mat-icon>
+  </button>
 </mat-toolbar>
-<p>
-    Store!!
-</p>
+
+<main>
+  <form class="store-form" [formGroup]="form">
+    <mat-form-field class="input-full-width">
+      <mat-label>Name: </mat-label>
+      <input type="name" matInput>
+
+    </mat-form-field>
+    <mat-form-field class="input-full-width">
+      <mat-label>Description: </mat-label>
+      <input type="description" matInput>
+
+    </mat-form-field>
+    <mat-form-field class="input-full-width">
+      <mat-label>Price: </mat-label>
+      <input type="price" matInput>
+
+    </mat-form-field>
+    <mat-form-field class="input-full-width">
+      <mat-label>Quantity: </mat-label>
+      <input type="quantity" matInput>
+
+    </mat-form-field>
+  </form>
+</main>
