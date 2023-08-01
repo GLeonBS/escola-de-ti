@@ -10,29 +10,38 @@
   <button mat-icon-button class="icon">
     <mat-icon>share</mat-icon>
   </button>
+  <a mat-button></a>
 </mat-toolbar>
 
 <main>
-  <form class="store-form" [formGroup]="form">
-    <mat-form-field class="input-full-width">
+
+  <section>
+    <pre>{{products$ | json}}</pre>
+  </section>
+
+
+  <form [formGroup]="form" (ngSubmit) = "onSubmit()">
+    <mat-form-field>
       <mat-label>Name: </mat-label>
-      <input type="name" matInput>
+      <input type="text"  formControlName="name" matInput>
 
     </mat-form-field>
-    <mat-form-field class="input-full-width">
+    <mat-form-field>
       <mat-label>Description: </mat-label>
-      <input type="description" matInput>
+      <input type="text" formControlName="description" matInput>
 
     </mat-form-field>
-    <mat-form-field class="input-full-width">
+    <mat-form-field>
       <mat-label>Price: </mat-label>
-      <input type="price" matInput>
+      <input type="number" formControlName="price" matInput>
 
     </mat-form-field>
-    <mat-form-field class="input-full-width">
+    <mat-form-field>
       <mat-label>Quantity: </mat-label>
-      <input type="quantity" matInput>
+      <input type="number" formControlName="quantity" matInput>
 
     </mat-form-field>
+
+    <button mat-raised-button>Enviar</button>
   </form>
 </main>
