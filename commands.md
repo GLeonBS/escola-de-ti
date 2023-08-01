@@ -4,33 +4,49 @@
  npx create-nx-workspace@latest escola-de-ti
 ```
 -  Criar novo workspace para começar a trabalhar
+
 ```
  npm i -D @nx/angular
 ```
 - Instalar o plugin nx para o Angular
+
 ```
  npm i -D @nx/nest
 ```
 - Instalar o plugin nx para o Nest
+
 ```
  nx list
 ```
 - Lista os plugins instalados e os que temos disponíveis
+
 ```
  npx nx g @nx/angular:application --name=mobile --directory=front --routing=true --style=scss --no-interactive
 ```
 - Se quiser apenas simular adicione "-d" ao final do comando
+
 ```
  npx nx g @nx/nest:application --name=auth -frontendProject=front-mobile --directory=back --strict-true
 ```
+- Gerar o projeto Front
+
 ```
  npx nx graph
 ```
+- UI para verificar seus projetos 
+
 ```
  npx nx g @nx/nest:resource --name=auth --project=back-auth --type=rest --directory=app --crud=false
 ```
+- Gerar um peojeto no back
+
 ```
- npm i --save @nestjs/jwt
+ npx nx g @nx/angular:library --name=feature-users --directory=account --lazy=true --parent=apps\front\mobile\src\app\app.routes.ts --routing=true --changeDetection=OnPush --displayBlock=true --prefix=user --style=scss --tags=type:feature,scope:account -d
+```
+- Criar uma Lib
+
+```
+npx nx g c account-feature-users --project account-feature-users --flat   
 ```
 
 ```
@@ -58,10 +74,13 @@ nx g c store-featue-products --project=store-feature-products --flat -d
 ```
 - Gera um componente para Store
 
+- Gerar um componente para sua Lib
+
 ```
  npx nx run-many -t serve
 ```
 - Executa as aplicações front e back
+
 ```
  npm audit fix
 ```

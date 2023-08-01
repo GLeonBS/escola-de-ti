@@ -5,12 +5,24 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
-import { MongooseModule } from '@nestjs/mongoose'
+import { MongooseModule } from '@nestjs/mongoose';
 import { ValidationPipe } from '@nestjs/common/pipes';
+import { ProductModule } from './product/product.module';
+import { StoreModule } from './store/store.module';
 
 @Module({
-  imports: [AuthModule, UsersModule, MongooseModule.forRoot('mongodb://0.0.0.0/nest')],
+  imports: [
+    AuthModule,
+    UsersModule,
+    MongooseModule.forRoot('mongodb://0.0.0.0/nest'),
+    ProductModule,
+    StoreModule,
+  ],
   controllers: [AppController],
-  providers: [AppService, {provide: APP_PIPE, useClass: ValidationPipe}, {provide: APP_FILTER, useClass: BaseExceptionFilter}],
+  providers: [
+    AppService,
+    { provide: APP_PIPE, useClass: ValidationPipe },
+    { provide: APP_FILTER, useClass: BaseExceptionFilter },
+  ],
 })
 export class AppModule {}
