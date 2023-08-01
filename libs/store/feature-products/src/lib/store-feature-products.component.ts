@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'store-store-feature-products',
@@ -9,8 +10,17 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class StoreFeatureProductsComponent {
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient){
+    this.getProducts();
+  }
+  #products = new BehaviorSubject([])
+  products$ = this.#products.asObservable()
 
+  getProducts() {
+    this.http.get('api/product').subscribe(products => {
+      this.#products.next(products as any)
+    })
+  }
   form = new FormGroup({
     name: new FormControl(),
     description: new FormControl(),
@@ -18,12 +28,14 @@ export class StoreFeatureProductsComponent {
     quantity:new FormControl(),
   })
 
-  products$: any = this.http.get('api/product').subscribe(prod => this.products$ = prod)
+  
 
   onSubmit() {
     if(this.form.valid){
       this.http.post('/api/product', this.form.value)
-        .subscribe(console.log)
+        .subscribe(() => {
+          this.getProducts()
+        })
     }
   }
 }
