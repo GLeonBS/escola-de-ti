@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="icon favorite-icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="icon">
+    <mat-icon>share</mat-icon>
+  </button>
+  <a mat-button></a>
+</mat-toolbar>
+
+<main>
+
+  <section>
+    <pre>{{products$ | json}}</pre>
+  </section>
+
+
+  <form [formGroup]="form" (ngSubmit) = "onSubmit()">
+    <mat-form-field>
+      <mat-label>Name: </mat-label>
+      <input type="text"  formControlName="name" matInput>
+
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description: </mat-label>
+      <input type="text" formControlName="description" matInput>
+
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price: </mat-label>
+      <input type="number" formControlName="price" matInput>
+
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Quantity: </mat-label>
+      <input type="number" formControlName="quantity" matInput>
+
+    </mat-form-field>
+
+    <button mat-raised-button>Enviar</button>
+  </form>
+</main>
