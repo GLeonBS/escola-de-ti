@@ -10,17 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StoreFeatureProductsComponent {
 
-  constructor(private http: HttpClient){
-    this.getProducts();
-  }
-  #products = new BehaviorSubject([])
-  products$ = this.#products.asObservable()
-
-  getProducts() {
-    this.http.get('api/product').subscribe(products => {
-      this.#products.next(products as any)
-    })
-  }
+  constructor(private http: HttpClient){}
   form = new FormGroup({
     name: new FormControl(),
     description: new FormControl(),
@@ -34,7 +24,7 @@ export class StoreFeatureProductsComponent {
     if(this.form.valid){
       this.http.post('/api/product', this.form.value)
         .subscribe(() => {
-          this.getProducts()
+          console.log()
         })
     }
   }

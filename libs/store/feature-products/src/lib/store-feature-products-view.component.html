@@ -1,10 +1,9 @@
 <p>store-featue-products-view works!</p>
 <mat-selection-list #shoes>
-    <mat-list-option *ngFor="let shoe of typesOfShoes">
-      {{shoe}}
-    </mat-list-option>
-  </mat-selection-list>
-  
-  <p>
-    
-  </p>
+  <mat-list-option *ngFor="let product of products">
+    {{product.name}}
+  </mat-list-option>
+</mat-selection-list>
+<p>
+
+</p>

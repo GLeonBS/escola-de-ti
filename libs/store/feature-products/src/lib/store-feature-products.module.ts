@@ -1,4 +1,4 @@
-import { createNgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { storeFeatureProductsRoutes } from './store-feature-products.routes';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreFeatueProductsViewComponent } from './store-feature-products-view.component';
 import {MatListModule} from '@angular/material/list';
 
-@createNgModule({
+@NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(storeFeatureProductsRoutes),
