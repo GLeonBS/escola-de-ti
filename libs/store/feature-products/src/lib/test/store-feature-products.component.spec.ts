@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { StoreFeatureProductsComponent } from './store-feature-products.component';
+import { StoreFeatureProductsComponent } from '../store-feature-products.component';
 
 describe('StoreFeatureProductsComponent', () => {
   let component: StoreFeatureProductsComponent;

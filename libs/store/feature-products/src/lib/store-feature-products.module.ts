@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { createNgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { storeFeatureProductsRoutes } from './store-feature-products.routes';
@@ -10,19 +10,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreFeatueProductsViewComponent } from './store-feature-products-view.component';
+import {MatListModule} from '@angular/material/list';
 
-@NgModule({
+@createNgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(storeFeatureProductsRoutes),
-    MatToolbarModule, 
-    MatIconModule, 
-    MatButtonModule, 
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule
-    ],
-  declarations: [StoreFeatureProductsComponent],
+    HttpClientModule,
+    MatListModule,
+  ],
+  declarations: [
+    StoreFeatureProductsComponent,
+    StoreFeatueProductsViewComponent,
+  ],
 })
-export class StoreFeatureProductsModule { }
+export class StoreFeatureProductsModule {}
