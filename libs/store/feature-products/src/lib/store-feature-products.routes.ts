@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 import { StoreFeatureProductsComponent } from './store-feature-products.component';
 import { StoreFeatueProductsViewComponent } from './store-feature-products-view.component';
+import { StoreFeatureProductsChangeComponent } from './store-feature-products-change.component';
 
 export const storeFeatureProductsRoutes: Route[] = [
   {
@@ -10,5 +11,9 @@ export const storeFeatureProductsRoutes: Route[] = [
   {
     path:'view',
     component:StoreFeatueProductsViewComponent
+  },
+  {
+    path:'change',
+    component:StoreFeatureProductsChangeComponent
   }
 ];

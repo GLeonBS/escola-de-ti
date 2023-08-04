@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, map } from 'rxjs';
 import { Product } from './types/product.type';
 import { __values } from 'tslib';
@@ -9,7 +9,7 @@ import { __values } from 'tslib';
   templateUrl: './store-feature-products-view.component.html',
   styleUrls: ['./store-feature-products.component.scss'],
 })
-export class StoreFeatueProductsViewComponent {
+export class StoreFeatueProductsViewComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.ngOnInit()
   }

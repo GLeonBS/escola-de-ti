@@ -11,7 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreFeatueProductsViewComponent } from './store-feature-products-view.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { StoreFeatureProductsChangeComponent } from './store-feature-products-change.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import {MatListModule} from '@angular/material/list';
   declarations: [
     StoreFeatureProductsComponent,
     StoreFeatueProductsViewComponent,
+    StoreFeatureProductsChangeComponent,
   ],
 })
 export class StoreFeatureProductsModule {}
